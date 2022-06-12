@@ -10,7 +10,7 @@ const Checkbox = ({ text }) => {
         className="w-10 h-10 outline-none text-blue-600 bg-gray-100 border-gray-300 rounded accent-black"
       />
       <label
-        for="checkbox-1"
+        htmlFor="checkbox-1"
         className="ml-2 text-xs font-normal text-gray-900 dark:text-gray-300"
       >
         {text}{" "}

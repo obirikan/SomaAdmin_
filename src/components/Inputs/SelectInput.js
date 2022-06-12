@@ -4,7 +4,7 @@ const SelectInput = ({ label, opts }) => {
   return (
     <div className="mb-6">
       <label
-        for="countries"
+        htmlFor="countries"
         className="block mb-2 text-sm font-semibold text-gray-900 dark:text-gray-300"
       >
         {label}
