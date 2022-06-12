@@ -1,6 +1,6 @@
 import React from "react";
 
-const Login = () => {
+const CompleteSignUp = () => {
   return (
     <div className="container px-4 py-5  bg-appBg">
       <h2 className="text-activeButton font-bold text-center py-10 text-3xl">
@@ -26,4 +26,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default CompleteSignUp;
