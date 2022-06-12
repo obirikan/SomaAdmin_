@@ -1,4 +1,7 @@
 import React from "react";
+import SelectInput from "../components/Inputs/SelectInput";
+import SubmitButton from "../components/Inputs/SubmitButton";
+import TextInput from "../components/Inputs/TextInput";
 
 const CompleteSignUp = () => {
   return (
@@ -10,7 +13,6 @@ const CompleteSignUp = () => {
         <h1 className="font-semibold text-2xl text-center mb-5">
           Create password
         </h1>
-        <SelectInput label="Country" opts={country} />
         <TextInput label="Password" type="password" id="password" />
         <TextInput
           label="Confirm Password"
@@ -19,7 +21,7 @@ const CompleteSignUp = () => {
         />
         <SubmitButton text="Complete sign up" />
         <p className="text-sm text-center mt-5 font-medium">
-          <a href="/login">Go back</a>
+          <a href="/">Go back</a>
         </p>
       </div>
     </div>
