@@ -10,15 +10,13 @@ const Login = () => {
         RATTIFY
       </h2>
       <div className="sign-up-wrapper bg-white rounded-md shadow-appShadow mx-auto py-5 px-6">
-        <h1 className="font-semibold text-2xl text-center mb-5">
-          Create password
-        </h1>
+        <h1 className="font-semibold text-2xl text-center mb-5">Sign In</h1>
         <TextInput label="Email address" type="email" id="email" />
         <TextInput label="Password" type="password" id="password" />
 
-        <SubmitButton text="Complete sign up" />
+        <SubmitButton text="Sign In" />
         <p className="text-sm text-center mt-5 font-medium">
-          <a href="/">Go back</a>
+          <a href="/">Don’t have an account yet? Sign up</a>
         </p>
       </div>
     </div>
