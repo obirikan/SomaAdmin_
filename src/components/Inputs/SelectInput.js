@@ -1,22 +1,22 @@
 import React from "react";
 
-const SelectInput = () => {
+const SelectInput = ({ label, opts }) => {
   return (
-    <div class="inline-block relative w-64">
-      <select class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
-        <option>Ghana</option>
-        <option>US</option>
-        <option>UK</option>
+    <div className="mb-6">
+      <label
+        for="countries"
+        className="block mb-2 text-sm font-semibold text-gray-900 dark:text-gray-300"
+      >
+        {label}
+      </label>
+      <select
+        id="countries"
+        class="bg-gray-50 outline-none border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-activeButton block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      >
+        {opts.map((ele, i) => {
+          return <option key={i}>{ele.text}</option>;
+        })}
       </select>
-      <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-        <svg
-          class="fill-current h-4 w-4"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20"
-        >
-          <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-        </svg>
-      </div>
     </div>
   );
 };
