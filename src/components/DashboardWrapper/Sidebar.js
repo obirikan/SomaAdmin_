@@ -1,6 +1,38 @@
 import React from "react";
-
+import { ReactComponent as Dashboard } from "../../assets/svgs/dashboard.svg";
+import { ReactComponent as Activation } from "../../assets/svgs/activation.svg";
+import { ReactComponent as Integrations } from "../../assets/svgs/integrations.svg";
+import { ReactComponent as Developers } from "../../assets/svgs/developers.svg";
+import { ReactComponent as Billing } from "../../assets/svgs/billing.svg";
+import { ReactComponent as Settings } from "../../assets/svgs/settings.svg";
 const Sidebar = () => {
+  const links = [
+    {
+      component: <Dashboard />,
+      text: "Dashboard",
+      link: "/",
+    },
+    {
+      component: <Activation />,
+      text: "Activation",
+      link: "/activation",
+    },
+    {
+      component: <Integrations />,
+      text: "Integrations",
+      link: "/integrations",
+    },
+    {
+      component: <Developers />,
+      text: "Developers",
+      link: "/developers",
+    },
+    {
+      component: <Billing />,
+      text: "Billing",
+      link: "/billing",
+    },
+  ];
   return (
     <div className="flex flex-row min-h-screen bg-gray-100 text-gray-800">
       <aside className="sidebar w-64 md:shadow transform -translate-x-full md:translate-x-0 transition-transform duration-150 ease-in bg-sidebarColor">
@@ -18,7 +50,7 @@ const Sidebar = () => {
                   clip-rule="evenodd"
                 />
               </svg> */}
-              <span className="leading-10 text-gray-100 text-2xl font-bold ml-1 uppercase">
+              <span className="leading-10 text-primary text-2xl font-bold ml-1 uppercase">
                 RATTIFY
               </span>
             </a>
@@ -26,115 +58,29 @@ const Sidebar = () => {
         </div>
         <div className="sidebar-content px-4 py-6">
           <ul className="flex flex-col w-full">
-            <li className="my-px">
-              <a
-                href="#"
-                className="flex flex-row items-center h-10 px-3 rounded-lg text-gray-700 bg-gray-100"
-              >
-                <span className="flex items-center justify-center text-lg text-gray-400">
-                  <svg
-                    fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    className="h-6 w-6"
+            {links.map((ele, i) => {
+              return (
+                <li key={i} className="my-px">
+                  <a
+                    href={ele.link}
+                    className="flex flex-row items-center h-10 px-3 rounded-lg hover:font-semibold "
                   >
-                    <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                  </svg>
-                </span>
-                <span className="ml-3">Dashboard</span>
-              </a>
-            </li>
-            <li className="my-px">
-              <a
-                href="#"
-                className="flex flex-row items-center h-10 px-3 rounded-lg text-gray-300 hover:bg-gray-100 hover:text-gray-700"
-              >
-                <span className="flex items-center justify-center text-lg text-gray-400">
-                  <svg
-                    fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    className="h-6 w-6"
-                  >
-                    <path d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
-                  </svg>
-                </span>
-                <span className="ml-3">Activation</span>
-              </a>
-            </li>
-            <li className="my-px">
-              <a
-                href="#"
-                className="flex flex-row items-center h-10 px-3 rounded-lg text-gray-300 hover:bg-gray-100 hover:text-gray-700"
-              >
-                <span className="flex items-center justify-center text-lg text-gray-400">
-                  <svg
-                    fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    className="h-6 w-6"
-                  >
-                    <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-                  </svg>
-                </span>
-                <span className="ml-3">Integration</span>
-              </a>
-            </li>
-            <li className="my-px">
-              <a
-                href="#"
-                className="flex flex-row items-center h-10 px-3 rounded-lg text-gray-300 hover:bg-gray-100 hover:text-gray-700"
-              >
-                <span className="flex items-center justify-center text-lg text-gray-400">
-                  <svg
-                    fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    className="h-6 w-6"
-                  >
-                    <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                </span>
-                <span className="ml-3">Developers</span>
-                <span className="flex items-center justify-center text-xs text-red-500 font-semibold bg-red-100 h-6 px-2 rounded-full ml-auto">
-                  1k
-                </span>
-              </a>
-            </li>
-            <li className="my-px">
-              <a
-                href="#"
-                className="flex flex-row items-center h-10 px-3 rounded-lg text-gray-300 hover:bg-gray-100 hover:text-gray-700"
-              >
-                <span className="flex items-center justify-center text-lg text-green-400">
-                  <svg
-                    fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    className="h-6 w-6"
-                  >
-                    <path d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </span>
-                <span className="ml-3">Billing </span>
-              </a>
-            </li>
+                    {ele.component}
+                    <span className="ml-3">{ele.text}</span>
+                  </a>
+                </li>
+              );
+            })}
           </ul>
+          <div className="my-px absolute bottom-10">
+            <a
+              href="/settings"
+              className="flex flex-row items-center h-10 px-3 rounded-lg hover:font-semibold "
+            >
+              <Settings />
+              <span className="ml-3">Settings</span>
+            </a>
+          </div>
         </div>
       </aside>
     </div>
