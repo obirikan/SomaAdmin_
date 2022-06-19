@@ -11,10 +11,10 @@ const Checkbox = ({ text }) => {
       />
       <label
         htmlFor="checkbox-1"
-        className="ml-2 text-xs font-normal text-gray-900 dark:text-gray-300"
+        className="ml-2 text-xs font-normal text-gray-900 "
       >
         {text}{" "}
-        <a href="#" className="text-blue-600 hover:underline dark:text-blue-500">
+        <a href="#" className="text-blue-600 hover:underline ">
           Rattify Privacy Policy and Terms & Conditions
         </a>
         .
