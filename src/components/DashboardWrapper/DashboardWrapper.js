@@ -5,7 +5,7 @@ import Sidebar from "./Sidebar";
 
 const DashboardWrapper = () => {
   return (
-    <div class="flex flex-row min-h-screen bg-gray-100 text-gray-800">
+    <div class="flex flex-row min-h-screen bg-white text-gray-800">
       <Sidebar />
       <DashboardMain />
     </div>
