@@ -20,6 +20,7 @@ module.exports = {
       },
       boxShadow: {
         appShadow: "0px 2px 2px rgba(0, 0, 0, 0.1)",
+        redShadow: "0px 0px 8px rgba(239, 68, 68, 0.4);",
       },
     },
   },
