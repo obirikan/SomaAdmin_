@@ -7,7 +7,10 @@ module.exports = {
         appBg: "#E5E5E5",
         primary: "#4361EE",
         primaryInactive: "#D0D7FA",
-        sidebarColor: "#ECEFFD"
+        sidebarColor: "#ECEFFD",
+        appRed: "#EF4444",
+        appGreen: "#22C55E",
+        appYellow: "#EAB308",
       },
       fontFamily: {
         sans: "'Inter', sans-serif",
