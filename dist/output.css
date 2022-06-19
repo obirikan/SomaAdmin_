@@ -694,7 +694,7 @@ video {
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
 
-.bg-activeButton {
+.bg-primary {
   --tw-bg-opacity: 1;
   background-color: rgb(35 87 76 / var(--tw-bg-opacity));
 }
@@ -782,7 +782,7 @@ video {
   font-weight: 400;
 }
 
-.text-activeButton {
+.text-primary {
   --tw-text-opacity: 1;
   color: rgb(35 87 76 / var(--tw-text-opacity));
 }
@@ -817,7 +817,7 @@ video {
   outline-offset: 2px;
 }
 
-.hover\:bg-inactiveButton:hover {
+.hover\:bg-primaryInactive:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(145 171 165 / var(--tw-bg-opacity));
 }
@@ -827,7 +827,7 @@ video {
           text-decoration-line: underline;
 }
 
-.focus\:border-activeButton:focus {
+.focus\:border-primary:focus {
   --tw-border-opacity: 1;
   border-color: rgb(35 87 76 / var(--tw-border-opacity));
 }

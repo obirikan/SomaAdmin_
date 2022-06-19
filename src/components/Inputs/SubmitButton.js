@@ -10,7 +10,7 @@ const SubmitButton = ({ text }) => {
     <button
       onClick={handleClick}
       type="button"
-      className="text-white w-full bg-activeButton hover:bg-inactiveButton  font-medium rounded-md text-sm px-5 py-2.5 mr-2 mb-2"
+      className="text-white w-full bg-primary hover:bg-primaryInactive  font-medium rounded-md text-sm px-5 py-2.5 mr-2 mb-2"
     >
       {text}
     </button>

@@ -3,7 +3,7 @@ import React from "react";
 const Sidebar = () => {
   return (
     <div className="flex flex-row min-h-screen bg-gray-100 text-gray-800">
-      <aside className="sidebar w-64 md:shadow transform -translate-x-full md:translate-x-0 transition-transform duration-150 ease-in bg-indigo-500">
+      <aside className="sidebar w-64 md:shadow transform -translate-x-full md:translate-x-0 transition-transform duration-150 ease-in bg-sidebarColor">
         <div className="sidebar-header flex items-center justify-center py-4">
           <div className="inline-flex">
             <a href="#" className="inline-flex flex-row items-center">

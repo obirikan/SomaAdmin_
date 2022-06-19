@@ -12,7 +12,7 @@ const TextInput = ({ type, placeholder, label, id }) => {
       <input
         type={type}
         id={id}
-        className="outline-none border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-activeButton block w-full p-2.5   "
+        className="outline-none border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-primary block w-full p-2.5   "
         placeholder={placeholder}
         required=""
       />

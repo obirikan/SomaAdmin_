@@ -32,7 +32,7 @@ const SignUp = () => {
   const consent = `I consent to the collection and processing of my personal data inline with data regulations as described in the`;
   return (
     <div className="container px-4 py-5  bg-appBg">
-      <h2 className="text-activeButton font-bold text-center py-10 text-3xl">
+      <h2 className="text-primary font-bold text-center py-10 text-3xl">
         RATTIFY
       </h2>
 

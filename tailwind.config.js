@@ -5,8 +5,8 @@ module.exports = {
     extend: {
       colors: {
         appBg: "#E5E5E5",
-        activeButton: "#23574c",
-        inactiveButton: "#91aba5",
+        primary: "#4361EE",
+        primaryInactive: "#D0D7FA",
         sidebarColor: "#ECEFFD"
       },
       fontFamily: {
