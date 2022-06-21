@@ -1,0 +1,17 @@
+.indicator-number {
+    font-weight: 600;
+    font-size: 48px;
+    color: #2E2E2E;
+}
+
+.indicator-title {
+    font-weight: 400;
+    font-size: 14px;
+    color: #2E2E2E;
+}
+
+.indicator-sub-text {
+    font-weight: 400;
+    font-size: 14px;
+    color: #898989;
+}
