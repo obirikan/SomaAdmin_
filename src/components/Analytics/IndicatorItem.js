@@ -5,7 +5,7 @@ import { ReactComponent as Info } from "../../assets/svgs/info.svg";
 
 const IndicatorItem = ({ item }) => {
   return (
-    <div>
+    <div className="mt-5 ">
       <div className="flex items-center">
         <p className="indicator-title">{item.title}</p>
         <Tooltip content={item.title} style="light">

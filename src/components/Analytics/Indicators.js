@@ -36,7 +36,7 @@ const Indicators = () => {
     },
   ];
   return (
-      <div class="grid grid-cols-4 gap-4 mt-10">
+      <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-4 mt-5">
         {data.map((ele, i) => {
           return <IndicatorItem item={ele} key={i} />;
         })}
