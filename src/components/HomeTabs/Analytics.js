@@ -67,6 +67,12 @@ const Analytics = () => {
           <Chart />
         </div>
       </div>
+      <button
+        type="button"
+        className="text-white flex bg-primary  font-medium rounded-md text-sm px-3 py-2.5 mr-2 mb-2 mt-10"
+      >
+        See API Documentation
+      </button>
     </div>
   );
 };
