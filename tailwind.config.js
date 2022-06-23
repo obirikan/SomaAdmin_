@@ -14,6 +14,7 @@ module.exports = {
         appRed: "#EF4444",
         appGreen: "#22C55E",
         appYellow: "#EAB308",
+        appGrey: "#B7B7B7",
       },
       fontFamily: {
         sans: "'Inter', sans-serif",
