@@ -4,7 +4,7 @@ import HomeTabs from "../components/HomeTabs";
 
 const Home = () => {
   return (
-    <DashboardMain>
+    <DashboardMain title="Home">
       <HomeTabs />
     </DashboardMain>
   );
