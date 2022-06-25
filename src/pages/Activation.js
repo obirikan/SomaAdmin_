@@ -1,9 +1,12 @@
-import React from 'react'
-
+import React from "react";
+import DashboardMain from "../components/DashboardWrapper/DashboardMain";
+import ActivationTabs from '../components/Activation/ActivationTabs'
 const Activation = () => {
   return (
-    <div>Activation</div>
-  )
-}
+    <DashboardMain title="Activation">
+      <ActivationTabs />
+    </DashboardMain>
+  );
+};
 
-export default Activation
+export default Activation;
