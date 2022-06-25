@@ -1,4 +1,5 @@
 import React from "react";
+import Pagination from "./Pagination";
 
 const Table = () => {
   const data = [
@@ -139,6 +140,7 @@ const Table = () => {
           })}
         </tbody>
       </table>
+      <Pagination />
     </div>
   );
 };
