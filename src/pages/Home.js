@@ -1,17 +1,13 @@
 import React from "react";
+import DashboardMain from "../components/DashboardWrapper/DashboardMain";
 import NavBar from "../components/DashboardWrapper/NavBar";
 import HomeTabs from "../components/HomeTabs";
 
 const Home = () => {
   return (
-    <main className="main flex flex-col flex-grow -ml-64 md:ml-0 transition-all duration-150 ease-in">
-      <NavBar />
-      <div className="main-content flex flex-col flex-grow p-4">
-        <div className="flex flex-col flex-grow bg-white rounded mt-4">
-          <HomeTabs />
-        </div>
-      </div>
-    </main>
+    <DashboardMain>
+      <HomeTabs />
+    </DashboardMain>
   );
 };
 
