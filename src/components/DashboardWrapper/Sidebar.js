@@ -5,6 +5,7 @@ import { ReactComponent as Integrations } from "../../assets/svgs/integrations.s
 import { ReactComponent as Developers } from "../../assets/svgs/developers.svg";
 import { ReactComponent as Billing } from "../../assets/svgs/billing.svg";
 import { ReactComponent as Settings } from "../../assets/svgs/settings.svg";
+import { ReactComponent as Documentation } from "../../assets/svgs/documentation.svg";
 const Sidebar = () => {
   const links = [
     {
@@ -31,6 +32,11 @@ const Sidebar = () => {
       component: <Billing />,
       text: "Billing",
       link: "/billing",
+    },
+    {
+      component: <Settings />,
+      text: "Settings",
+      link: "/settings",
     },
   ];
   return (
@@ -74,11 +80,11 @@ const Sidebar = () => {
           </ul>
           <div className="my-px absolute bottom-10">
             <a
-              href="/settings"
+              href="/documentation"
               className="flex flex-row items-center h-10 px-3 rounded-lg hover:font-semibold "
             >
-              <Settings />
-              <span className="ml-3">Settings</span>
+              <Documentation />
+              <span className="ml-3">Documentation</span>
             </a>
           </div>
         </div>
