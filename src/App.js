@@ -5,6 +5,7 @@ import SignUp from "./pages/SignUp";
 import CompleteSignUp from "./pages/CompleteSignUp";
 import Login from "./pages/Login";
 import DashboardWrapper from "./components/DashboardWrapper/DashboardWrapper";
+import Home from "./pages/Home";
 
 function App() {
   return (
@@ -13,7 +14,10 @@ function App() {
         <Route path="/" element={<SignUp />} />
         <Route path="/complete-signup" element={<CompleteSignUp />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/home" element={<DashboardWrapper />} />
+        {/* <Route path="/home" element={<DashboardWrapper />} /> */}
+        <Route element={<DashboardWrapper />}>
+          <Route path="/home" element={<Home />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
