@@ -11,7 +11,7 @@ const Sidebar = () => {
     {
       component: <Dashboard />,
       text: "Dashboard",
-      link: "/",
+      link: "/home",
     },
     {
       component: <Activation />,
