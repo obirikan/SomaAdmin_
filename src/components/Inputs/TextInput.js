@@ -5,7 +5,7 @@ const TextInput = ({ type, placeholder, label, id, className }) => {
     <div className={`mb-6 ${className}`}>
       <label
         htmlFor="id"
-        className="block mb-2 text-sm font-semibold text-gray-900 "
+        className="block mb-2 text-sm font-medium text-gray-900 "
       >
         {label}
       </label>
