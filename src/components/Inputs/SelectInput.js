@@ -1,8 +1,8 @@
 import React from "react";
 
-const SelectInput = ({ label, opts }) => {
+const SelectInput = ({ label, opts, className }) => {
   return (
-    <div className="mb-6">
+    <div className={`mb-6 ${className}`}>
       <label
         htmlFor="countries"
         className="block mb-2 text-sm font-semibold text-gray-900"
