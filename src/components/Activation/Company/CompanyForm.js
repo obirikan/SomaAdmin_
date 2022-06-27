@@ -2,7 +2,7 @@ import React from "react";
 import SelectInput from "../../Inputs/SelectInput";
 import Textarea from "../../Inputs/Textarea";
 import TextInput from "../../Inputs/TextInput";
-
+import { ReactComponent as WhiteArrowRight } from "../../../assets/svgs/white-arrow-right.svg";
 const CompanyForm = () => {
   const options = [
     {
@@ -60,6 +60,14 @@ const CompanyForm = () => {
         label="Selected countries"
         placeholder="No countries selected"
       />
+      <button
+        type="button"
+        className="text-white flex bg-primary  font-medium rounded-md text-sm px-3 py-2.5 mr-2 mb-2 mt-10"
+      >
+        <span className="flex justify-center items-center">
+          Next <WhiteArrowRight className="ml-2"/>
+        </span>
+      </button>
     </form>
   );
 };

@@ -1,8 +1,8 @@
 import React from "react";
 
-const TextInput = ({ type, placeholder, label, id }) => {
+const TextInput = ({ type, placeholder, label, id, className }) => {
   return (
-    <div className="mb-6">
+    <div className={`mb-6 ${className}`}>
       <label
         htmlFor="id"
         className="block mb-2 text-sm font-semibold text-gray-900 "
