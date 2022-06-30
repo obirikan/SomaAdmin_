@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 import DashboardWrapper from "./components/DashboardWrapper/DashboardWrapper";
 import Home from "./pages/Home";
 import Activation from "./pages/Activation";
+import Integrations from "./pages/Integrations";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route element={<DashboardWrapper />}>
           <Route path="/home" element={<Home />} />
           <Route path="/activation" element={<Activation />} />
+          <Route path="/integrations" element={<Integrations />} />
         </Route>
       </Routes>
     </BrowserRouter>
