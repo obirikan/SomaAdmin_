@@ -31,9 +31,9 @@ module.exports = {
         redShadow: "0px 0px 8px rgba(239, 68, 68, 0.4);",
         companyShadow:
           " 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06);",
+        clientShadow:
+          "0px 0px 4px rgba(0, 0, 0, 0.04), 0px 8px 16px rgba(0, 0, 0, 0.08)",
       },
-      clientShadow:
-        "0px 0px 4px rgba(0, 0, 0, 0.04), 0px 8px 16px rgba(0, 0, 0, 0.08)",
     },
   },
 
