@@ -45,8 +45,8 @@ const ApiIntegration = () => {
         </div>
       </div>
       <p className="mt-5 text-sm font-medium mb-5">
-        1. Add @rattify/node npm package to your package.json. Rattify has no
-        dependency but expects node version to be >=12.x
+        {` 1. Add @rattify/node npm package to your package.json. Rattify has no
+        dependency but expects node version to be >=12.x`}
       </p>
       <div className="bg-white shadow-companyShadow p-6 mb-10">
         <span className="code-content ml-5">{`{`}</span>
@@ -83,7 +83,7 @@ const ApiIntegration = () => {
         className="text-white flex bg-primary  font-medium rounded-md text-sm px-3 py-2.5 mr-2 mt-10 "
       >
         Create
-      </button> 
+      </button>
     </div>
   );
 };
