@@ -1,12 +1,29 @@
 code {
-    font-family: Consolas,"courier new";
-    color: crimson;
-    padding: 2px;
-    font-size: 105%;
-  }
+  font-family: 'Roboto', sans-serif;
+}
 
 
-  .comment{
-    color: #B7B7B7;
+.comment {
+  font-family: 'Roboto Mono';
+  color: #B7B7B7;
+  font-weight: 500;
+  font-size: 14px;
 
-  }
+}
+
+.tag {
+  font-family: 'Roboto Mono';
+  color: #F97316;
+  font-weight: 500;
+  font-size: 14px;
+  display: block;
+}
+
+
+.code-content{
+    font-family: 'Roboto Mono';
+    color: #183462;
+    font-weight: 500;
+    font-size: 14px;
+    display: block;
+}
