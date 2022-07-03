@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Activation from "./pages/Activation";
 import Integrations from "./pages/Integrations";
 import Billings from "./pages/Billings";
+import Logs from "./pages/Logs";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/activation" element={<Activation />} />
           <Route path="/integrations" element={<Integrations />} />
           <Route path="/billing" element={<Billings />} />
+          <Route path="/logs" element={<Logs />} />
         </Route>
       </Routes>
     </BrowserRouter>
