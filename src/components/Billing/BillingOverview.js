@@ -20,7 +20,7 @@ const BillingOverview = () => {
   ];
   return (
     <div>
-      <p className=" text-sm font-normal mb-5">Billing overview</p>
+      <p className=" text-sm font-normal mb-5 pl-4">Billing overview</p>
       <div className="flex flex-wrap  mt-5 mb-5">
         <div className="w-full md:w-1/2 md:mb-0 px-4 mb-5">
           <div className="shadow-companyShadow p-4 rounded">
