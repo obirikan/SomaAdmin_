@@ -25,8 +25,8 @@ const Sidebar = () => {
     },
     {
       component: <Developers />,
-      text: "Developers",
-      link: "/developers",
+      text: "Logs",
+      link: "/logs",
     },
     {
       component: <Billing />,
