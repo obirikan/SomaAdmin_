@@ -45,12 +45,11 @@ const ApiLogsTable = ({ data }) => {
                 </td>
                 <td className="px-6 py-4 text-black">{ele.date}</td>
                 <td className="px-6 py-4 text-black">
-                  {ele.request || ele.eventType}
+                  {ele.request}
                 </td>
                 <td className="px-6 py-4 text-black">
-                  {ele.details || ele.endpoint}
+                  {ele.details }
                 </td>
-                <td className="px-6 py-4 text-black">{ele?.responseTime}</td>
               </tr>
             );
           })}
