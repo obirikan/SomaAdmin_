@@ -19,6 +19,7 @@ module.exports = {
         statusYellow: "#FBF0CE",
         statusRed: "#FCDADA",
         appGray: "#898989",
+        buttonRed: "#EF4444"
       },
       fontFamily: {
         sans: "'Inter', sans-serif",
