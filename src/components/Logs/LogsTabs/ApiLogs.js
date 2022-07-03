@@ -1,10 +1,47 @@
 import React, { useState } from "react";
-import LogsTable from "../LogsTable";
+import ApiLogsTable from "../ApiLogsTable";
 import { Dropdown } from "flowbite-react";
 
 const ApiLogs = () => {
   const [time, setTime] = useState("Last 6 months");
   const [code, setCode] = useState("All status codes");
+
+  const data = [
+    {
+      statusCode: 200,
+      date: "2022-06-24 18:09",
+      request: "Lorem ipsum",
+      details: "Lorem ipsum dolait",
+    },
+
+    {
+      statusCode: 200,
+      date: "2022-06-24 18:09",
+      request: "Lorem ipsum",
+      details: "Lorem ipsum dolait",
+    },
+
+    {
+      statusCode: 400,
+      date: "2022-06-24 18:09",
+      request: "Lorem ipsum",
+      details: "Lorem ipsum dolait",
+    },
+
+    {
+      statusCode: 200,
+      date: "2022-06-24 18:09",
+      request: "Lorem ipsum",
+      details: "Lorem ipsum dolait",
+    },
+
+    {
+      statusCode: 200,
+      date: "2022-06-24 18:09",
+      request: "Lorem ipsum",
+      details: "Lorem ipsum dolait",
+    },
+  ];
 
   return (
     <div>
@@ -47,7 +84,7 @@ const ApiLogs = () => {
           </div>
         </div>
       </div>
-      <LogsTable />
+      <ApiLogsTable data={data} />
     </div>
   );
 };
