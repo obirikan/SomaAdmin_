@@ -9,6 +9,7 @@ import Activation from "./pages/Activation";
 import Integrations from "./pages/Integrations";
 import Billings from "./pages/Billings";
 import Logs from "./pages/Logs";
+import Settings from "./pages/Settings";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/integrations" element={<Integrations />} />
           <Route path="/billing" element={<Billings />} />
           <Route path="/logs" element={<Logs />} />
+          <Route path="/settings" element={<Settings />} />
         </Route>
       </Routes>
     </BrowserRouter>
