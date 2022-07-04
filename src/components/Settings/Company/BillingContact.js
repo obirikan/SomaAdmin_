@@ -3,7 +3,7 @@ import TextInput from "../../Inputs/TextInput";
 
 const BillingContact = () => {
   return (
-    <div className="bg-white shadow-companyShadow p-6">
+    <div className="bg-white shadow-companyShadow p-6 mt-5">
       <h3 className="font-semibold ml-2 mt-5">Billing Contact</h3>
       <div className="flex flex-wrap  mt-5 mb-5">
         <TextInput

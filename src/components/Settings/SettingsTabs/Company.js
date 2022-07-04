@@ -1,19 +1,14 @@
-import React from 'react'
-import BillingContact from '../Company/BillingContact'
-import CompanyInformation from '../Company/CompanyInformation'
+import React from "react";
+import BillingContact from "../Company/BillingContact";
+import CompanyInformation from "../Company/CompanyInformation";
 
 const Company = () => {
   return (
-    <>
-    <div className="w-full m-auto md:w-[35rem]  ">
-     <CompanyInformation/>
+    <div className="w-full m-auto md:w-[36rem]  ">
+      <CompanyInformation />
+      <BillingContact />
     </div>
-    <div className="w-full mt-5 m-auto md:w-[35rem]  ">
-     <BillingContact/>
-    </div>
-    </>
+  );
+};
 
-  )
-}
-
-export default Company
+export default Company;
