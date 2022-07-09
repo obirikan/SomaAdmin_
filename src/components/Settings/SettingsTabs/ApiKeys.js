@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import SandboxForm from "../../Integrations/GetStarted/SandboxForm";
 
 const ApiKeys = () => {
   return (
-    <div>ApiKeys</div>
-  )
-}
+    <div className="w-full m-auto md:w-[35rem] ">
+      <SandboxForm />
+    </div>
+  );
+};
 
-export default ApiKeys
+export default ApiKeys;
