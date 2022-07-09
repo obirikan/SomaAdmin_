@@ -1,23 +1,18 @@
 import React from "react";
 
-const Checkbox = ({ text }) => {
+const Checkbox = ({ text, color }) => {
   return (
-    <div className="flex items-start mb-4">
+    <div class="flex items-center mr-4 mt-3">
       <input
-        id="checkbox-1"
         type="checkbox"
         value=""
-        className="w-10 h-10 outline-none text-blue-600 bg-gray-100 border-gray-300 rounded accent-black"
+        className={`w-4 h-4 bg-gray-100 rounded border-gray-300 focus:outline-none text-${color}`}
       />
       <label
-        htmlFor="checkbox-1"
-        className="ml-2 text-xs font-normal text-gray-900 "
+        for="red-checkbox"
+        class="ml-2 text-sm text-gray-900 dark:text-gray-300"
       >
-        {text}{" "}
-        <a href="#" className="text-blue-600 hover:underline ">
-          Rattify Privacy Policy and Terms & Conditions
-        </a>
-        .
+        {text}
       </label>
     </div>
   );

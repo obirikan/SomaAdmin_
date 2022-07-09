@@ -1,5 +1,5 @@
 import React from "react";
-import Checkbox from "../components/Inputs/Checkbox";
+import SignUpCheckbox from "../components/Inputs/SignUpCheckbox";
 import SelectInput from "../components/Inputs/SelectInput";
 import SubmitButton from "../components/Inputs/SubmitButton";
 import TextInput from "../components/Inputs/TextInput";
@@ -66,7 +66,7 @@ const SignUp = () => {
           id="phone"
         />
         <SelectInput label="Are you a software developer?" opts={options} />
-        <Checkbox text={consent} />
+        <SignUpCheckbox text={consent} />
         <SubmitButton text="Sign up" />
         <p className="text-sm text-center mt-5 font-medium">
           <a href="/login">Already have an account? Sign in</a>
