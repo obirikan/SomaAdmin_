@@ -1,8 +1,11 @@
 import React from 'react'
+import Teams from '../Team/Team'
 
 const Team = () => {
   return (
-    <div>Team</div>
+    <div className="w-full m-auto md:w-[35rem] ">
+      <Teams/>
+    </div>
   )
 }
 
