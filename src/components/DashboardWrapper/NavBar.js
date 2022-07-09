@@ -17,7 +17,7 @@ const NavBar = ({ title }) => {
     },
   ];
   return (
-    <header className="header bg-white shadow py-4 px-4">
+    <header className="header bg-white shadow py-4 px-4 ">
       <div className="header-content flex items-center flex-row">
         <span className=" font-semibold text-2xl">{title}</span>
         <div className="flex ml-auto items-center">
