@@ -1,6 +1,6 @@
 import React from "react";
 
-const TextInput = ({ type, placeholder, label, id, className }) => {
+const TextInput = ({ type, placeholder, label, id, className ,onChange}) => {
   return (
     <div className={`mb-6 ${className}`}>
       <label
@@ -14,7 +14,8 @@ const TextInput = ({ type, placeholder, label, id, className }) => {
         id={id}
         className="outline-none border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-primary block w-full p-2.5   "
         placeholder={placeholder}
-        required=""
+        required
+        onChange={onChange}
       />
     </div>
   );
