@@ -12,7 +12,6 @@ const Universites = () => {
   const usercollection=collection(db,"schools")
 
   const add=async()=>{
-    console.log(UniversitySchema(University,image,code))
     await addDoc(usercollection,UniversitySchema(University,image,code)).then(res=>{
       console.log(res)
     })

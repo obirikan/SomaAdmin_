@@ -5,7 +5,7 @@ import InviteTeamForm from "../InviteTeam/InviteTeamForm";
 const InviteTeam = () => {
   return (
     <div className="w-full m-auto md:w-[25rem] bg-white shadow-companyShadow p-6 ">
-      <h3 className="font-semibold mt-5">Invite your team to collaborate</h3>
+      <h3 className="font-semibold mt-5">Add Categories</h3>
       <p className="mt-3 text-sm">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut.

@@ -38,14 +38,21 @@ export const RegisterSchema = (fullname,email,username,adminType)=>{
 }
 
 
-
-
 export const UniversitySchema = (University,image,code)=>{
     return{
         id:uuidv4(),
         University,
         image,
         code,
+        dateCreated:new Date(),
+    }
+}
+
+export const CategorySchema = (category,icon)=>{
+    return{
+        id:uuidv4(),
+        category,
+        icon,
         dateCreated:new Date(),
     }
 }

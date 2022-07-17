@@ -4,6 +4,7 @@ import { signInWithEmailAndPassword,signOut} from 'firebase/auth'
 import { db } from "../Firebase/firebase";
 import { auth } from "../Firebase/firebase";
 import { collection,addDoc } from '@firebase/firestore';
+import { CategorySchema } from "../Schema";
 
 
 
@@ -16,6 +17,9 @@ export const useAuth=()=>{
 export const AuthProvider = ({children}) => {
     const [current,setcurrent]=useState()
     const [loading,setloading]=useState(false)
+    const usercollection=collection(db,'Categories')
+
+
     const history=useNavigate()
     //database paths
     // const usercollection=collection(db,'Userposts')
@@ -25,7 +29,6 @@ export const AuthProvider = ({children}) => {
       const login=async(email, password)=> {
         try {
             const user =await signInWithEmailAndPassword(auth,email,password)
-            console.log(user)
             history('/home')
             return
         } catch (error) {
@@ -44,7 +47,16 @@ export const AuthProvider = ({children}) => {
         }
         
       }
-    
+      
+    //submit
+      const sub=async(category,icon)=> {
+        try {
+            await addDoc(usercollection,CategorySchema(category,icon))
+        } catch (error) {
+            console.log(error.message)
+        }
+        
+      }
      
 
     useEffect(()=>{
@@ -59,7 +71,8 @@ export const AuthProvider = ({children}) => {
         current,
         login,
         logout,
-  }
+        sub,
+    }
 
   return (
     <AuthContext.Provider value={value}>
