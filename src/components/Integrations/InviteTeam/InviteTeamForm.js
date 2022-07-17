@@ -10,6 +10,7 @@ const InviteTeamForm = () => {
   const [category,setcategory]=useState('')
   const [url,seturl]=useState('')
   
+  
   const send=async()=>{
     try {
       if(url==null) return
@@ -28,6 +29,7 @@ const InviteTeamForm = () => {
       console.log(error.message)
     }
   }
+
 
   return (
     <form className="mt-5">
