@@ -1,0 +1,70 @@
+import React,{useEffect,useState,useContext,createContext} from "react"
+import { useNavigate } from "react-router-dom"
+import { signInWithEmailAndPassword,signOut} from 'firebase/auth'
+import { db } from "../Firebase/firebase";
+import { auth } from "../Firebase/firebase";
+import { collection,addDoc } from '@firebase/firestore';
+
+
+
+const AuthContext=createContext()
+
+export const useAuth=()=>{
+    return useContext(AuthContext)
+}
+
+export const AuthProvider = ({children}) => {
+    const [current,setcurrent]=useState()
+    const [loading,setloading]=useState(false)
+    const history=useNavigate()
+    //database paths
+    // const usercollection=collection(db,'Userposts')
+    // const userschema=collection(db,'Users')
+      
+      //login
+      const login=async(email, password)=> {
+        try {
+            const user =await signInWithEmailAndPassword(auth,email,password)
+            console.log(user)
+            history('/home')
+            return
+        } catch (error) {
+            console.log(error.message)
+        }
+        
+      }
+     //logout
+      const logout=async()=> {
+        try {
+             await signOut(auth)
+            history('/')
+            return
+        } catch (error) {
+            console.log(error.message)
+        }
+        
+      }
+    
+     
+
+    useEffect(()=>{
+     const unsubscribe= auth.onAuthStateChanged(user=>{
+        setcurrent(user)
+        setloading(true)
+      })
+      return unsubscribe
+    },[])
+
+    const value={
+        current,
+        login,
+        logout,
+  }
+
+  return (
+    <AuthContext.Provider value={value}>
+      {loading&&children}
+    </AuthContext.Provider>
+  )
+}
+

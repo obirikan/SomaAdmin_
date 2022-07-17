@@ -21,6 +21,7 @@ export const updateSchema = (list,title,action,message,image)=>{
         action,
         message,
         image,
+        version:uuidv4(),
         dateCreated:new Date(),
     }
 }
@@ -35,6 +36,9 @@ export const RegisterSchema = (fullname,email,username,adminType)=>{
         dateCreated:new Date(),
     }
 }
+
+
+
 
 export const UniversitySchema = (University,image,code)=>{
     return{

@@ -45,30 +45,8 @@ const Table = () => {
                 <td className="px-20 py-4 text-black" scope="row">
                   {ele.code}
                 </td>
-                <td className="px-6 py-4 text-black">{ele.university}</td>
-                {/* <td className="px-6 py-4 text-black"> */}
-                  {/* <span
-                    className={`px-3 py-2 rounded-3xl flex items-center justify-center w-fit capitalize text-sm ${
-                      ele.status.toLowerCase() === "approved"
-                        ? "bg-statusGreen"
-                        : ele.status.toLowerCase() === "declined"
-                        ? "bg-statusRed"
-                        : "bg-statusYellow"
-                    }`}
-                  >
-                    <span
-                      className={`w-2 h-2 rounded-full mr-2 block ${
-                        ele.status.toLowerCase() === "approved"
-                          ? "bg-appGreen"
-                          : ele.status.toLowerCase() === "declined"
-                          ? "bg-appRed"
-                          : "bg-appYellow"
-                      }`}
-                    ></span>
-                    {ele.status}
-                  </span> */}
-                {/* </td> */}
-                <td className="px-6 py-4 text-black">{ele.image}</td>
+                <td className="px-6 py-4 text-black">{ele.University}</td>
+                <td className="px-6 py-4 text-black"><img src={ele.image} className='pl-2' alt='him' style={{width:'40.50px'}}/></td>
                </tr>
             );
           })}

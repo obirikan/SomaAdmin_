@@ -17,17 +17,22 @@ const Sidebar = () => {
     },
     {
       component: <Activation />,
-      text: "2",
+      text: "Riders",
       link: "/activation",
     },
     {
+      component: <Activation />,
+      text: "Update",
+      link: "/Update",
+    },
+    {
       component: <Integrations />,
-      text: "3",
+      text: "Categories",
       link: "/integrations",
     },
     {
       component: <Developers />,
-      text: "4",
+      text: "Merchants",
       link: "/logs",
     },
     {

@@ -4,7 +4,6 @@ import Profile from "./Profile";
 import Company from "./Company";
 import Team from "./Team";
 import Preferences from "./Preferences";
-import ApiKeys from "./ApiKeys";
 import Webhooks from "./Webhooks";
 
 
@@ -23,9 +22,6 @@ const SettingsTabs = () => {
       </Tabs.Item>
       <Tabs.Item title="Preferences">
         <Preferences />
-      </Tabs.Item>
-      <Tabs.Item title="API Keys">
-        <ApiKeys />
       </Tabs.Item>
       <Tabs.Item title="Webhooks">
         <Webhooks />
