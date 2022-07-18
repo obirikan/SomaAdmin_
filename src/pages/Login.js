@@ -22,7 +22,7 @@ const Login = () => {
 },[])
 
   return (
-    <div className="container px-4 py-5  bg-appBg w-full m-auto md:w-[36rem] ">
+    <div className="container px-4 py-5  bg-appBg w-full m-auto md:w-[26rem] ">
       <h2 className="text-primary font-bold text-center py-10 text-3xl">
         SOMA
       </h2>

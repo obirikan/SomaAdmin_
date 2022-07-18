@@ -45,6 +45,12 @@ const Sidebar = () => {
       text: "6",
       link: "/settings",
     },
+    {
+      component: <Settings />,
+      text: "Partners",
+      link: "/Partners",
+    },
+
   ];
   return (
     <div className="flex flex-row min-h-screen bg-gray-100 text-gray-800 fixed">

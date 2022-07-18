@@ -11,6 +11,8 @@ import Logs from "./pages/Logs";
 import Update from './pages/Update'
 import Settings from "./pages/Settings";
 import {AuthProvider} from './context/authContext'
+import Partners from './pages/Partners'
+
 
 function App() {
   return (
@@ -27,6 +29,7 @@ function App() {
           <Route path="/billing" element={<Billings />} />
           <Route path="/logs" element={<Logs />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path="/Partners" element={<Partners />} />
         </Route>
       </Routes>
     </AuthProvider>
