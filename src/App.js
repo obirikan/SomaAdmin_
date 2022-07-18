@@ -17,7 +17,7 @@ function App() {
   <BrowserRouter>
     <AuthProvider>
       <Routes>
-        <Route path="/complete-signup" element={<CompleteSignUp />} />
+        {/* <Route path="/complete-signup" element={<CompleteSignUp />} /> */}
         <Route path="/" element={<Login />} />
         <Route element={<DashboardWrapper />}>
           <Route path="/home" element={<Home />} />

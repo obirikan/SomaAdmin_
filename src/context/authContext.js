@@ -28,7 +28,7 @@ export const AuthProvider = ({children}) => {
       //login
       const login=async(email, password)=> {
         try {
-            const user =await signInWithEmailAndPassword(auth,email,password)
+            await signInWithEmailAndPassword(auth,email,password)
             history('/home')
             return
         } catch (error) {
