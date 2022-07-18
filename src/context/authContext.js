@@ -21,9 +21,6 @@ export const AuthProvider = ({children}) => {
 
 
     const history=useNavigate()
-    //database paths
-    // const usercollection=collection(db,'Userposts')
-    // const userschema=collection(db,'Users')
       
       //login
       const login=async(email, password)=> {

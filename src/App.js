@@ -5,7 +5,7 @@ import Login from "./pages/Login";
 import DashboardWrapper from "./components/DashboardWrapper/DashboardWrapper";
 import Home from "./pages/Home";
 import Activation from "./pages/Activation";
-import Integrations from "./pages/Integrations";
+import Category from "./pages/Category";
 import Billings from "./pages/Billings";
 import Logs from "./pages/Logs";
 import Update from './pages/Update'
@@ -25,7 +25,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/activation" element={<Activation />} />
           <Route path="/update" element={<Update />} />
-          <Route path="/integrations" element={<Integrations />} />
+          <Route path="/Category" element={<Category />} />
           <Route path="/billing" element={<Billings />} />
           <Route path="/logs" element={<Logs />} />
           <Route path="/settings" element={<Settings />} />

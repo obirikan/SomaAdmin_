@@ -28,7 +28,7 @@ const Sidebar = () => {
     {
       component: <Integrations />,
       text: "Categories",
-      link: "/integrations",
+      link: "/category",
     },
     {
       component: <Developers />,
