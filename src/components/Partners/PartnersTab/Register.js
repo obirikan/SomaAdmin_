@@ -21,6 +21,8 @@ const InviteTeamForm = () => {
     const [establishment, setEstablishment] = useState('')
     const [storeLocation, setStoreLocation] = useState({})
     const [Universities, setUniversities] = useState([])
+    const [loading,setLoading] = useState(false)
+    const [description,setDescription] = useState('')
 
 
 
@@ -44,23 +46,25 @@ const InviteTeamForm = () => {
 
 
     const send = async () => {
+        setLoading(true)
         try {
             if (url == null) return
             const imgref = ref(storage, `${parnersFileDirectory}${url.name + v4()}`)
-            await uploadBytes(imgref, url).then((snapshot) => {
+            await uploadBytes(imgref, url).then((snapshot) => {  
                 getDownloadURL(snapshot.ref).then(async (icon) => {
-                    await RegisterPartners(institution, businessName, password, userName, email, telephone, establishment, storeLocation, icon).then(() => {
-                        setInstitution('')
-                        setBusinessName('')
-                        setPassword('')
-                        setUserName('')
-                        setEmail('')
-                        setTelephone('')
-                        setEstablishment('')
-                        setStoreLocation('')
-                    })
+                    await RegisterPartners(description,institution, businessName, password, userName, email, telephone, establishment, storeLocation, icon)
                 })
-                alert('file uploaded')
+                setLoading(false)
+                setInstitution('')
+                setBusinessName('')
+                setPassword('')
+                setUserName('')
+                setEmail('')
+                setTelephone('')
+                setEstablishment('')
+                setStoreLocation('')
+               setLoading(false)
+               alert("Data added successfully ")
             }).catch((err) => {
                 alert(err.message)
             })
@@ -96,7 +100,7 @@ const InviteTeamForm = () => {
     return (
         <div className="mt-5">
             <h4>Select Institution</h4>
-            <select onChange={(e) => setInstitution(e.target.value)} className="w-full" >
+            <select  onChange={(e) => setInstitution(e.target.value)} className="input" >
                 <option>Select Institution</option>
                 {Universities.map((item, i) => (
                     <option key={i} value={item.University}>{item.University}</option>
@@ -106,7 +110,7 @@ const InviteTeamForm = () => {
             <br />
             <h4>Select Establishment</h4>
 
-            <select onChange={(e) => setEstablishment(e.target.value)} className="w-full" >
+            <select onChange={(e) => setEstablishment(e.target.value)} className="input" >
                 <option>Select Establishment</option>
                 <option value={"Restaurant"}>Restaurants</option>
                 <option value={"Supermarket"}>Super Markets</option>
@@ -116,23 +120,27 @@ const InviteTeamForm = () => {
             <br />
 
             <p>
-                <input onChange={(e) => setUserName(e.target.value)} className="input" type={'text'} placeholder="Enter User name" />
+                <input value={userName} onChange={(e) => setUserName(e.target.value)} className="input" type={'text'} placeholder="Enter User name" />
             </p>
 
             <p>
-                <input onChange={(e) => setBusinessName(e.target.value)} className="input" type={'text'} placeholder="Enter Business Name" />
+                <input value={businessName} onChange={(e) => setBusinessName(e.target.value)} className="input" type={'text'} placeholder="Enter Business Name" />
             </p>
             <p>
-                <input onChange={(e) => setEmail(e.target.value)} className="input" type={'email'} placeholder="Enter Email adress" />
+                <input value={email} onChange={(e) => setEmail(e.target.value)} className="input" type={'email'} placeholder="Enter Email adress" />
             </p>
             <p>
-                <input onChange={(e) => setTelephone(e.target.value)} className="input" type={'text'} placeholder="Enter Phone Number" />
+                <input value={telephone} onChange={(e) => setTelephone(e.target.value)} className="input" type={'text'} placeholder="Enter Phone Number" />
             </p>
             <p>
-                <input onChange={(e) => setPassword(e.target.value)} className="input" type={'password'} placeholder="Enter Password" />
+                <input value={password} onChange={(e) => setPassword(e.target.value)} className="input" type={'password'} placeholder="Enter Password" />
             </p>
             <p>
-                <input onChange={(e) => seturl(e.target.files[0])} className="input" type={'file'} placeholder="Enter Store Banner" />
+                <textarea value={description} onChange={(e) => setDescription(e.target.files[0])} className="input" type={'file'}  placeholder="Enter Store Description" ></textarea>
+            </p>
+
+            <p>
+                <input value={url} onChange={(e) => seturl(e.target.files[0])} className="input" type={'file'} placeholder="Enter Store Banner" />
             </p>
 
 
@@ -141,18 +149,31 @@ const InviteTeamForm = () => {
                 onClick={() => GetCurrentLocation()}>
                 Get Current Location
             </button>
+
+            
             <div>Lat : {storeLocation.lat} , Lng: {storeLocation.lng}</div>
             <br />
             <br />
 
             <div className="flex mt-10 mb-2">
-                <button
+                {loading?(
+                     <button
+                     onClick={send}
+                     type="button"
+                     className="text-white flex bg-primary  font-medium rounded-md text-sm px-3 py-2.5 mr-2 "
+                 >
+                     Uploading Data Please wait ...
+                 </button>
+                ):(
+                    <button
                     onClick={send}
                     type="button"
                     className="text-white flex bg-primary  font-medium rounded-md text-sm px-3 py-2.5 mr-2 "
                 >
                     ADD
                 </button>
+                )}
+            
             </div>
         </div>
     );
