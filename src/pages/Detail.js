@@ -2,14 +2,14 @@ import React from "react";
 
 import Transactions from "../components/Billing/Transactions";
 import DashboardMain from "../components/DashboardWrapper/DashboardMain";
-import Details from "../components/Billing/Details";
+import Index from '../components/Detail/Index'
 
-const Billings = () => {
+const Detail= () => {
   return (
-    <DashboardMain title="Billing">
-        <Transactions/>
+    <DashboardMain title="User Detail">
+         <Index/>
     </DashboardMain>
   );
 };
 
-export default Billings;
+export default Detail;

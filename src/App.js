@@ -12,6 +12,7 @@ import Update from './pages/Update'
 import Settings from "./pages/Settings";
 import {AuthProvider} from './context/authContext'
 import Partners from './pages/Partners'
+import Details from "./components/Billing/Details";
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route path="/logs" element={<Logs />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/Partners" element={<Partners />} />
+          <Route path="/details" element={<Details/>}/>
         </Route>
       </Routes>
     </AuthProvider>
