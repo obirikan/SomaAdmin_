@@ -1,7 +1,7 @@
 import React from "react";
 import DashboardMain from "../components/DashboardWrapper/DashboardMain";
 import IntegrationsTabs from "../components/Integrations/IntegrationsTabs";
-const Integrations = () => {
+const Category = () => {
   return (
     <DashboardMain title="Integrations">
       <IntegrationsTabs />
@@ -9,4 +9,4 @@ const Integrations = () => {
   );
 };
 
-export default Integrations;
+export default Category;

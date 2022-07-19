@@ -28,7 +28,7 @@ const Sidebar = () => {
     {
       component: <Integrations />,
       text: "Categories",
-      link: "/integrations",
+      link: "/category",
     },
     {
       component: <Developers />,
@@ -59,7 +59,7 @@ const Sidebar = () => {
           <div className="inline-flex">
             <a href="#" className="inline-flex flex-row items-center">
               <span className="leading-10 text-primary text-2xl font-bold ml-1 uppercase">
-                SomaAdmin
+                Soma_Admin
               </span>
             </a>
           </div>
