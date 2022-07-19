@@ -10,6 +10,7 @@ const uuidv4 = () => {
 
 
 export const updateTableName = 'Updates';
+export const parnerTableName = 'Partners'
 
 
 
@@ -26,7 +27,37 @@ export const updateSchema = (list,title,action,message,image)=>{
     }
 }
 
-export const RegisterSchema = (fullname,email,username,adminType)=>{
+export const RegisterSchema = (institution,businessName,password,username,email,telephone,establishment,storeLocation,Cimage)=>{
+    return {
+        id:uuidv4(),
+        institution,
+        businessName,
+        latlng:{},
+        password,
+        username,
+        email,
+        telephone,
+        establishment,
+        approved:false,
+        metaData:{},
+        storeData:[],
+        orderList:[],
+        readyList:[],
+        categories:[],
+        storeLocation,
+        storeLogo:'',
+        storeBanner:'',
+        description:'',
+        paymentSetup:false,
+        storeSetup:false,
+        isOpen:false,
+        Cimage,
+        createdAt:new Date(),
+    }
+}
+
+
+export const PartnerSchema = (fullname,email,username,adminType)=>{
     return{
         id:uuidv4(),
         fullname,
