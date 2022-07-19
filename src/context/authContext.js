@@ -21,6 +21,7 @@ export const AuthProvider = ({children}) => {
 
 
     const history=useNavigate()
+    //
       
       //login
       const login=async(email, password)=> {
