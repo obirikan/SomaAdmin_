@@ -6,6 +6,7 @@ import { collection, query, where, getDocs } from "firebase/firestore";
 import { storage } from "../../../Firebase/firebase";
 import { v4 } from 'uuid'
 import { db } from '../../../Firebase/firebase'
+import './partners.css'
 const parnersFileDirectory = 'partnersImages/'
 
 const InviteTeamForm = () => {
@@ -113,63 +114,27 @@ const InviteTeamForm = () => {
             </select>
             <br />
             <br />
-            <TextInput
-                className="w-full"
-                placeholder="Enter Username"
-                label="Enter Username"
-                type="text"
-                onChange={(e) => setUserName(e.target.value)}
-                reqired={false}
 
-            />
-            <TextInput
-                className="w-full"
-                placeholder="Enter Business Name"
-                label="Enter Business Name"
-                type="text"
-                onChange={(e) => setBusinessName(e.target.value)}
-                reqired={false}
+            <p>
+                <input onChange={(e) => setUserName(e.target.value)} className="input" type={'text'} placeholder="Enter User name" />
+            </p>
 
-            />
-            <TextInput
-                className="w-full"
-                placeholder="Enter Email"
-                label="Enter Email"
-                type="text"
-                onChange={(e) => setEmail(e.target.value)}
-                reqired={false}
+            <p>
+                <input onChange={(e) => setBusinessName(e.target.value)} className="input" type={'text'} placeholder="Enter Business Name" />
+            </p>
+            <p>
+                <input onChange={(e) => setEmail(e.target.value)} className="input" type={'email'} placeholder="Enter Email adress" />
+            </p>
+            <p>
+                <input onChange={(e) => setTelephone(e.target.value)} className="input" type={'text'} placeholder="Enter Phone Number" />
+            </p>
+            <p>
+                <input onChange={(e) => setPassword(e.target.value)} className="input" type={'password'} placeholder="Enter Password" />
+            </p>
+            <p>
+                <input onChange={(e) => seturl(e.target.files[0])} className="input" type={'file'} placeholder="Enter Store Banner" />
+            </p>
 
-            />
-
-            <TextInput
-                className="w-full"
-                placeholder="Enter telephone"
-                label="Enter Telephone"
-                type="number"
-                onChange={(e) => setTelephone(e.target.value)}
-                reqired={false}
-            />
-
-
-            <TextInput
-                className="w-full"
-                placeholder="Enter Password"
-                label="Enter Password"
-                type="password"
-                onChange={(e) => setTelephone(e.target.value)}
-                reqired={false}
-
-            />
-           
-            <br />
-            <br />
-            <TextInput
-                className="w-full"
-                placeholder="Enter Phone"
-                label="Enter Store Image"
-                type="file"
-                onChange={(e) => seturl(e.target.files[0])}
-            />
 
             <button
                 style={{ width: 200, height: 40, border: '1px solid', borderRadius: 10 }}
