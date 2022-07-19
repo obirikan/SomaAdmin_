@@ -1,18 +1,21 @@
-import React,{useEffect,useState,useContext,createContext} from "react"
+import React, { useEffect, useState, useContext, createContext } from "react"
 import { useNavigate } from "react-router-dom"
-import { signInWithEmailAndPassword,signOut} from 'firebase/auth'
+import { signInWithEmailAndPassword, signOut } from 'firebase/auth'
 import { db } from "../Firebase/firebase";
 import { auth } from "../Firebase/firebase";
-import { collection,addDoc } from '@firebase/firestore';
+import { collection, addDoc } from '@firebase/firestore';
 import { CategorySchema } from "../Schema";
+import { PartnerSchema, parnerTableName } from "../Schema";
 
 
 
-const AuthContext=createContext()
 
-export const useAuth=()=>{
-    return useContext(AuthContext)
+const AuthContext = createContext()
+
+export const useAuth = () => {
+  return useContext(AuthContext)
 }
+
 
 export const AuthProvider = ({children}) => {
     const [current,setcurrent]=useState()
@@ -72,9 +75,60 @@ export const AuthProvider = ({children}) => {
         sub,
     }
 
+  }
+  //logout
+  const logout = async () => {
+    try {
+      await signOut(auth)
+      history('/')
+      return
+    } catch (error) {
+      console.log(error.message)
+    }
+
+  }
+
+  //submit
+  const sub = async (category, icon) => {
+    try {
+      await addDoc(usercollection, CategorySchema(category, icon))
+    } catch (error) {
+      console.log(error.message)
+    }
+
+  }
+  //submit
+  const RegisterPartners = async (institution, businessName, password, userName, email, telephone, establishment, storeLocation, Cimage) => {
+    try {
+       await addDoc(collection(db, parnerTableName),
+        PartnerSchema(institution, businessName, password, userName, email, telephone, establishment, storeLocation, Cimage))
+      console.log('status :', true)
+    } catch (error) {
+      console.log('status :', false)
+    }
+
+  }
+
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged(user => {
+      setcurrent(user)
+      setloading(true)
+    })
+    return unsubscribe
+  }, [])
+
+  const value = {
+    current,
+    login,
+    logout,
+    sub,
+    RegisterPartners
+  }
+
   return (
     <AuthContext.Provider value={value}>
-      {loading&&children}
+      {loading && children}
     </AuthContext.Provider>
   )
 }
