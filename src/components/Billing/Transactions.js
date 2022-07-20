@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { Tabs } from "flowbite-react";
-import { ReactComponent as ChevronRight } from "../../assets/svgs/chevron-gray-right.svg";
 import TransactionTable from "./TransactionTable";
-import Details from "./Details";
 
 const Transactions = () => {
   return (
@@ -13,9 +11,6 @@ const Transactions = () => {
       <Tabs.Group aria-label="Tabs with underline" style="underline">
       <Tabs.Item active={true} title="Users">
       <TransactionTable/>
-      </Tabs.Item>
-      <Tabs.Item active={true} title="details">
-      <Details/>
       </Tabs.Item>
     </Tabs.Group>
       
