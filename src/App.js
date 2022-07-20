@@ -13,6 +13,8 @@ import Settings from "./pages/Settings";
 import {AuthProvider} from './context/authContext'
 import Partners from './pages/Partners'
 import Detail from "./pages/Detail";
+import PartnerDetails from "./pages/PartnerDetails";
+
 
 
 function App() {
@@ -32,7 +34,8 @@ function App() {
           <Route path="/logs" element={<Logs />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/Partners" element={<Partners />} />
-        
+          <Route path="/PartnerDetails" element={<PartnerDetails/>}/>
+
         </Route>
       </Routes>
     </AuthProvider>
