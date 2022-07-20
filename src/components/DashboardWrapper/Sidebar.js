@@ -37,7 +37,7 @@ const Sidebar = () => {
     },
     {
       component: <Billing />,
-      text: "5",
+      text: "Users",
       link: "/billing",
     },
     {

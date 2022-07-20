@@ -2,7 +2,7 @@ import React from "react";
 
 import Transactions from "../components/Billing/Transactions";
 import DashboardMain from "../components/DashboardWrapper/DashboardMain";
-import Details from "../components/Billing/Details";
+import Details from "../components/Detail/Details";
 
 const Billings = () => {
   return (

@@ -1,51 +1,29 @@
-import React from "react";
-import { Link } from "react-router-dom";
-
+import React,{useState,useEffect} from "react";
+import { Link,useLocation } from "react-router-dom";
+import { collection,onSnapshot } from '@firebase/firestore';
+import { db } from "../../Firebase/firebase";
 const TransactionTable = () => {
-  const data = [
-    {
-      date: "1 - 30 Jun, 2022",
-      description: "Rattify Verification: 129 API calls",
-      invoice: "YellowSolutions-06202201.pdf",
-      amount: "$80.57",
-    },
-    {
-      date: "1 - 31 May, 2022",
-      description: "Rattify Verification: 403 API calls",
-      invoice: "YellowSolutions-05202201.pdf",
-      amount: "$347.90",
-    },
-    {
-      date: "1 - 30 Apr, 2022",
-      description: "Rattify Verification: 1,056 API calls",
-      invoice: "YellowSolutions-04202201.pdf",
-      amount: "$1,023.00",
-    },
-    {
-      date: "1 - 31 Mar, 2022",
-      description: "Rattify Verification: 300 API calls",
-      invoice: "YellowSolutions-03202201.pdf",
-      amount: "$245.50",
-    },
-    {
-      date: "1 - 31 May, 2022",
-      description: "Rattify Verification: 403 API calls",
-      invoice: "YellowSolutions-05202201.pdf",
-      amount: "$347.90",
-    },
-    {
-      date: "1 - 28 Feb, 2022",
-      description: "Rattify Verification: 2,800 API calls",
-      invoice: "YellowSolutions-02202201.pdf",
-      amount: "$1,950.60",
-    },
-    {
-      date: "1 - 31 Jan, 2022",
-      description: "1 - 31 Jan, 2022",
-      invoice: "YellowSolutions-01202201.pdf",
-      amount: "$680.57",
-    },
-  ];
+  const [data,setdata]=useState([])
+
+  
+ const usercollection=collection(db,"Users")
+
+ 
+ useEffect(()=>{
+
+   
+  const getusers=async()=>{
+    onSnapshot(usercollection,(snapshot)=>{
+        
+        setdata(snapshot.docs.map(doc=>({...doc.data(),id:doc.id})))
+           // setusers(snapshot.docs.map(doc=>(doc.data())))
+
+    })
+
+  }
+  getusers()
+ },[])
+
   return (
     <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-10">
       <table className="w-full text-sm text-left text-gray-500 ">
@@ -64,10 +42,9 @@ const TransactionTable = () => {
             return (
               <tr className="bg-white ">
                 <td className="px-6 py-4 text-black" scope="row">
-                  {ele.date}
-                  <Link to='/details'>het</Link>
+                  <Link to={{pathname:`/details/${ele.id}`}} state={{ele}}>{ele.name}</Link>
                 </td>
-                <td className="px-6 py-4 text-black">{ele.description}</td>
+                <td className="px-6 py-4 text-black"></td>
               </tr>
             );
           })}
