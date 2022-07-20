@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Pagination from "./Details";
 
-const TransactionTable = () => {
+const Details= () => {
   const data = [
     {
       date: "1 - 30 Jun, 2022",
@@ -47,7 +47,7 @@ const TransactionTable = () => {
     },
   ];
   return (
-    <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-10">
+    <div className="flex items-center relative overflow-x-auto shadow-md sm:rounded-lg mt-10">
       <table className="w-full text-sm text-left text-gray-500 ">
         <thead className="text-xs text-gray-700 uppercase bg-gray-50 border-b">
           <tr>
@@ -55,7 +55,7 @@ const TransactionTable = () => {
               name
             </th>
             <th scope="col" className="px-6 py-3 text-appGrey font-medium">
-              Date Created
+              university
             </th>
           </tr>
         </thead>
@@ -65,7 +65,6 @@ const TransactionTable = () => {
               <tr className="bg-white ">
                 <td className="px-6 py-4 text-black" scope="row">
                   {ele.date}
-                  <Link to='/details'>het</Link>
                 </td>
                 <td className="px-6 py-4 text-black">{ele.description}</td>
               </tr>
@@ -77,4 +76,4 @@ const TransactionTable = () => {
   );
 };
 
-export default TransactionTable;
+export default Details;

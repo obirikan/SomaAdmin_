@@ -136,7 +136,7 @@ const InviteTeamForm = () => {
                 <input value={password} onChange={(e) => setPassword(e.target.value)} className="input" type={'password'} placeholder="Enter Password" />
             </p>
             <p>
-                <textarea value={description} onChange={(e) => setDescription(e.target.files[0])} className="input" type={'file'}  placeholder="Enter Store Description" ></textarea>
+                <textarea value={description} onChange={(e) => setDescription(e.target.value)} className="input"   placeholder="Enter Store Description" ></textarea>
             </p>
 
             <p>
@@ -150,7 +150,7 @@ const InviteTeamForm = () => {
                 Get Current Location
             </button>
 
-            
+
             <div>Lat : {storeLocation.lat} , Lng: {storeLocation.lng}</div>
             <br />
             <br />

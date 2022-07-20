@@ -1,0 +1,11 @@
+.imagebox{
+    height:100px;
+    width:300px;
+    display: block;
+    border: 1px solid;
+    overflow: hidden;
+}
+.storeImage{
+    max-height:fit-content;
+    max-width:100%;
+}
