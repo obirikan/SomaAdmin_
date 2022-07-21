@@ -35,7 +35,6 @@ function App() {
           <Route path="/settings" element={<Settings />} />
           <Route path="/Partners" element={<Partners />} />
           <Route path="/PartnerDetails" element={<PartnerDetails/>}/>
-
         </Route>
       </Routes>
     </AuthProvider>
