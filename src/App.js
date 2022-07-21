@@ -34,6 +34,7 @@ function App() {
           <Route path="/logs" element={<Logs />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/Partners" element={<Partners />} />
+          <Route path="/PartnerDetails" element={<PartnerDetails/>}/>
         </Route>
       </Routes>
     </AuthProvider>
