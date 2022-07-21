@@ -13,6 +13,8 @@ import Settings from "./pages/Settings";
 import {AuthProvider} from './context/authContext'
 import Partners from './pages/Partners'
 import Detail from "./pages/Detail";
+import PartnerDetails from "./pages/PartnerDetails";
+
 
 
 function App() {

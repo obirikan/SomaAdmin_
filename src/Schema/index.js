@@ -27,18 +27,19 @@ export const updateSchema = (list,title,action,message,image)=>{
     }
 }
 
-export const RegisterSchema = (institution,businessName,password,username,email,telephone,establishment,storeLocation,Cimage)=>{
+export const RegisterSchema = (description,institution,businessName,password,username,email,telephone,establishment,storeLocation,Cimage)=>{
     return {
         id:uuidv4(),
+        promo:'',
         institution,
         businessName,
-        latlng:{},
         password,
         username,
         email,
         telephone,
         establishment,
         approved:false,
+        options:[],
         metaData:{},
         storeData:[],
         orderList:[],
@@ -46,12 +47,11 @@ export const RegisterSchema = (institution,businessName,password,username,email,
         categories:[],
         storeLocation,
         storeLogo:'',
-        storeBanner:'',
-        description:'',
+        storeBanner:Cimage,
+        description,
         paymentSetup:false,
         storeSetup:false,
         isOpen:false,
-        Cimage,
         createdAt:new Date(),
     }
 }

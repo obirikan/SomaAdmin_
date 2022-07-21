@@ -5,7 +5,7 @@ import { db } from "../Firebase/firebase";
 import { auth } from "../Firebase/firebase";
 import { collection, addDoc } from '@firebase/firestore';
 import { CategorySchema } from "../Schema";
-import { PartnerSchema, parnerTableName } from "../Schema";
+import { RegisterSchema, parnerTableName } from "../Schema";
 
 
 
@@ -59,10 +59,10 @@ export const AuthProvider = ({children}) => {
         
       }
      
-      const RegisterPartners = async (institution, businessName, password, userName, email, telephone, establishment, storeLocation, Cimage) => {
+      const RegisterPartners = async (description,institution, businessName, password, userName, email, telephone, establishment, storeLocation, Cimage) => {
         try {
            await addDoc(collection(db, parnerTableName),
-            PartnerSchema(institution, businessName, password, userName, email, telephone, establishment, storeLocation, Cimage))
+           RegisterSchema(description,institution, businessName, password, userName, email, telephone, establishment, storeLocation, Cimage))
           console.log('status :', true)
         } catch (error) {
           console.log('status :', false)
