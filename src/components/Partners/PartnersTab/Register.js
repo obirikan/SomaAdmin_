@@ -140,7 +140,7 @@ const InviteTeamForm = () => {
             </p>
 
             <p>
-                <input value={url} onChange={(e) => seturl(e.target.files[0])} className="input" type={'file'} placeholder="Enter Store Banner" />
+                <input  onChange={(e) => seturl(e.target.files[0])} className="input" type={'file'} placeholder="Enter Store Banner" />
             </p>
 
 
