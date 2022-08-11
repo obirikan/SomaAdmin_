@@ -10,50 +10,11 @@ import TextInput from "../../Inputs/TextInput";
 import Textarea from "../../Inputs/Textarea";
 
 
-
 const MERCHANT_NAME = 'Partners'
 const parnersFileDirectory = 'MenuImages'
 
 
 
-
-const TeamTable = ({ data }) => {
-    const labels = ["Name", "Price  (GHS)", "Action"];
-    return (
-        <table className="w-full text-sm text-left text-gray-500 ">
-            <thead className="text-xs text-gray-700 uppercase  border-b">
-                <tr>
-                    {labels?.map((ele, i) => {
-                        return (
-                            <th
-                                key={i}
-                                scope="col"
-                                className="px-6 py-3 text-appGrey font-medium"
-                            >
-                                {ele}
-                            </th>
-                        );
-                    })}
-                </tr>
-            </thead>
-            <tbody>
-                {data.map((ele, i) => {
-                    return (
-                        <tr key={i} className="bg-white ">
-                            <td className="px-6 py-4 text-black">{ele.name}</td>
-                            <td className="px-6 py-4 text-black">{ele.value}</td>
-                            <td className="px-6 py-4 text-black">
-                                <span onClick={() => alert(ele.id)} className="text-xs p-2 border-2 rounded cursor-pointer border-appGrey">
-                                    Delete
-                                </span>
-                            </td>
-                        </tr>
-                    );
-                })}
-            </tbody>
-        </table>
-    );
-};
 
 const Menu = () => {
 
@@ -98,6 +59,46 @@ const Menu = () => {
             </div>
         );
     };
+
+
+
+const TeamTable = ({ data }) => {
+    const labels = ["Name", "Price  (GHS)", "Action"];
+    return (
+        <table className="w-full text-sm text-left text-gray-500 ">
+            <thead className="text-xs text-gray-700 uppercase  border-b">
+                <tr>
+                    {labels?.map((ele, i) => {
+                        return (
+                            <th
+                                key={i}
+                                scope="col"
+                                className="px-6 py-3 text-appGrey font-medium"
+                            >
+                                {ele}
+                            </th>
+                        );
+                    })}
+                </tr>
+            </thead>
+            <tbody>
+                {data.map((ele, i) => {
+                    return (
+                        <tr key={i} className="bg-white ">
+                            <td className="px-6 py-4 text-black">{ele.name}</td>
+                            <td className="px-6 py-4 text-black">{ele.value}</td>
+                            <td className="px-6 py-4 text-black">
+                                <span onClick={() => deleteSideMenu(ele)} className="text-xs p-2 border-2 rounded cursor-pointer border-appGrey">
+                                    Delete
+                                </span>
+                            </td>
+                        </tr>
+                    );
+                })}
+            </tbody>
+        </table>
+    );
+};
 
 
     const AddList = () => {
@@ -349,6 +350,7 @@ const Menu = () => {
     return (
         <div className="bg-white w-md">
             {loading ? <span>Updating Categories ...</span> : null}
+
             <div className="bg-white shadow-companyShadow  p-4">
                 <h3 className="font-semibold mt-5">Create Category</h3>
                 <TextInput
