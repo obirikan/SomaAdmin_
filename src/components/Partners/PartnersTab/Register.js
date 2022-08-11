@@ -7,6 +7,8 @@ import { storage } from "../../../Firebase/firebase";
 import { v4 } from 'uuid'
 import { db } from '../../../Firebase/firebase'
 import './partners.css'
+import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
+
 const parnersFileDirectory = 'partnersImages/'
 
 const InviteTeamForm = () => {
@@ -149,6 +151,8 @@ const InviteTeamForm = () => {
                 onClick={() => GetCurrentLocation()}>
                 Get Current Location
             </button>
+            <GooglePlacesAutocomplete  apiKey="AIzaSyCwFNzldPWPkTD1PrmgDZKNNwS6D6aYbXo" />
+
 
 
             <div>Lat : {storeLocation.lat} , Lng: {storeLocation.lng}</div>
