@@ -40,7 +40,7 @@ const Form = () => {
 
 
   const submit = async () => {
-    const q = query(usercollection, where("id", "===", "Updates"));
+    // const q = query(usercollection, where("id", "===", "Updates"));
     const action = {
       type: link,
       value: value
@@ -50,7 +50,6 @@ const Form = () => {
       const que = doc(collection(db,updateTableName), res.id)
       console.log(que)
       await updateDoc(que,updateSchema(list,title,action,msg,img))
-
     })
 
   }
@@ -64,15 +63,11 @@ const Form = () => {
  
   useEffect(()=>{
 
-    
     const getusers=async()=>{
       onSnapshot(usercollection_1,(snapshot)=>{
           setdata(snapshot.docs.map(doc=>({...doc.data(),id:doc.id})))
           const dat=snapshot.docs.map(doc=>({...doc.data(),id:doc.id}))
           setlist(dat[0].list)
-          // setd(snapshot.docs.map(doc=>(doc.data())))
-         
-          // console.log(list)
       })
       setlist(data[0].list)
       setlink(data[0].action.type)
