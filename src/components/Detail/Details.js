@@ -26,14 +26,14 @@ const Details= () => {
     <TextInput
         className="w-full md:w-1/2 md:mb-0  px-3"
         placeholder="Enter registration number"
-        label="Company registration number"
+        label="Name"
         type="text"
         id="last name"
       />
       <TextInput
         className="w-full md:w-1/2 md:mb-0  px-3"
         placeholder="Enter tax ID"
-        label="Company Tax ID"
+        label="Phone Number"
         type="text"
         id="last name"
       />
