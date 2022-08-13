@@ -12,7 +12,7 @@ const index = () => {
       </Tabs.Item>
       <Tabs.Item title="View Category">
         <ViewCategory/>
-      </Tabs.Item>
+      </Tabs.Item > 
     </Tabs.Group>
   );
 };

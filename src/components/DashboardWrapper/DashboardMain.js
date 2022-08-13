@@ -1,5 +1,5 @@
 import React from "react";
-import HomeTabs from "../HomeTabs";
+import HomeTabs from "../UniversityTabs";
 import NavBar from "./NavBar";
 
 const DashboardMain = ({ children, title }) => {
